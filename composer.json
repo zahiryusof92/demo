@@ -25,7 +25,9 @@
         "marjose123/filament-lockscreen": "^1.0",
         "ramnzys/filament-email-log": "^0.2.2",
         "squirephp/countries-en": "^3.3",
-        "squirephp/currencies-en": "^3.3"
+        "squirephp/currencies-en": "^3.3",
+        "stijnvanouplines/blade-country-flags": "^1.0",
+        "z3d0x/filament-logger": "^0.3.5"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",

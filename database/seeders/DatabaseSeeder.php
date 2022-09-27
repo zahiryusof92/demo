@@ -30,8 +30,8 @@ class DatabaseSeeder extends Seeder
 
         // Admin
         $user = User::factory()->create([
-            'name' => 'Demo User',
-            'email' => 'admin@filamentphp.com',
+            'name' => 'Admin User',
+            'email' => 'admin@example.com',
         ]);
         $this->command->info('Admin user created.');
 
