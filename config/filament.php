@@ -13,6 +13,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use lockscreen\FilamentLockscreen\Http\Middleware\Locker;
 
 return [
 
@@ -50,10 +51,11 @@ return [
     |
     */
 
-    'auth' => [
-        'guard' => env('FILAMENT_AUTH_GUARD', 'web'),
-        'pages' => [
-            'login' => \App\Filament\Pages\Auth\Login::class,
+    "auth" => [
+        "guard" => env("FILAMENT_AUTH_GUARD", "web"),
+        "pages" => [
+            "login" =>
+                \JeffGreco13\FilamentBreezy\Http\Livewire\Auth\Login::class,
         ],
     ],
 
@@ -221,6 +223,8 @@ return [
     'middleware' => [
         'auth' => [
             Authenticate::class,
+            Locker::class,
+            'verified',
         ],
         'base' => [
             EncryptCookies::class,

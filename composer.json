@@ -17,9 +17,11 @@
         "flowframe/laravel-trend": "^0.1.1",
         "fruitcake/laravel-cors": "^2.0.5",
         "guzzlehttp/guzzle": "^7.2",
+        "jeffgreco13/filament-breezy": "^1.4",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
+        "marjose123/filament-lockscreen": "^1.0",
         "squirephp/countries-en": "^3.3",
         "squirephp/currencies-en": "^3.3"
     },
