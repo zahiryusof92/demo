@@ -70,6 +70,7 @@ class OrderResource extends Resource
                                     }),
 
                                 Forms\Components\Select::make('status')
+                                    ->searchable()
                                     ->options([
                                         'new' => 'New',
                                         'processing' => 'Processing',
@@ -100,6 +101,7 @@ class OrderResource extends Resource
                                     ->schema([
                                         Forms\Components\Select::make('shop_product_id')
                                             ->label('Product')
+                                            ->searchable()
                                             ->options(Product::query()->pluck('name', 'id'))
                                             ->required()
                                             ->reactive()

@@ -36,26 +36,26 @@ class DatabaseSeeder extends Seeder
         $this->command->info('Admin user created.');
 
         // Shop
-        $categories = ShopCategory::factory()->count(20)
+        $categories = ShopCategory::factory()->count(5)
             ->has(
                 ShopCategory::factory()->count(3),
                 'children'
             )->create();
         $this->command->info('Shop categories created.');
 
-        $brands = Brand::factory()->count(20)
+        $brands = Brand::factory()->count(5)
             ->has(Address::factory()->count(rand(1, 3)))
             ->create();
         $this->command->info('Shop brands created.');
 
-        $customers = Customer::factory()->count(1000)
+        $customers = Customer::factory()->count(10)
             ->has(Address::factory()->count(rand(1, 3)))
             ->create();
         $this->command->info('Shop customers created.');
 
-        $products = Product::factory()->count(50)
+        $products = Product::factory()->count(5)
             ->sequence(fn ($sequence) => ['shop_brand_id' => $brands->random(1)->first()->id])
-            ->hasAttached($categories->random(rand(3, 6)), ['created_at' => now(), 'updated_at' => now()])
+            ->hasAttached($categories->random(rand(3, 5)), ['created_at' => now(), 'updated_at' => now()])
             ->has(
                 Comment::factory()->count(rand(10, 20))
                     ->state(fn (array $attributes, Product $product) => ['customer_id' => $customers->random(1)->first()->id]),
@@ -63,7 +63,7 @@ class DatabaseSeeder extends Seeder
             ->create();
         $this->command->info('Shop products created.');
 
-        $orders = Order::factory()->count(1000)
+        $orders = Order::factory()->count(10)
             ->sequence(fn ($sequence) => ['shop_customer_id' => $customers->random(1)->first()->id])
             ->has(Payment::factory()->count(rand(1, 3)))
             ->has(
@@ -87,10 +87,10 @@ class DatabaseSeeder extends Seeder
         $this->command->info('Shop orders created.');
 
         // Blog
-        $blogCategories = BlogCategory::factory()->count(20)->create();
+        $blogCategories = BlogCategory::factory()->count(5)->create();
         $this->command->info('Blog categories created.');
 
-        Author::factory()->count(20)
+        Author::factory()->count(5)
             ->has(
                 Post::factory()->count(5)
                     ->has(
