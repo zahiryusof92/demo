@@ -23,6 +23,7 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "marjose123/filament-lockscreen": "^1.0",
+        "ramnzys/filament-email-log": "^0.2.2",
         "squirephp/countries-en": "^3.3",
         "squirephp/currencies-en": "^3.3"
     },
