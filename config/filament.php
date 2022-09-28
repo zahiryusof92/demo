@@ -175,7 +175,7 @@ return [
     */
 
     'layout' => [
-        'max_content_width' => null,
+        'max_content_width' => 'full',
         'sidebar' => [
             'is_collapsible_on_desktop' => true,
         ],
@@ -183,6 +183,10 @@ return [
             'actions' => [
                 'alignment' => 'left',
             ],
+        ],
+        'notifications' => [
+            'vertical_alignment' => 'top',
+            'alignment' => 'center',
         ],
     ],
 

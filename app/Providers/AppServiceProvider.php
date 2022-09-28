@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Filament\Facades\Filament;
+use Filament\Navigation\UserMenuItem;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
@@ -28,10 +29,12 @@ class AppServiceProvider extends ServiceProvider
     {
         Model::unguard();
 
-        Filament::registerNavigationGroups([
-            'Shop',
-            'Blog',
-        ]);
+        Filament::serving(function () {
+            Filament::registerNavigationGroups([
+                'Shop',
+                'Blog',
+            ]);
+        });
 
         if (app()->environment('production')) {
             URL::forceScheme('https');
