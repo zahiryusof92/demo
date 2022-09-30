@@ -55,7 +55,7 @@ return [
         "guard" => env("FILAMENT_AUTH_GUARD", "web"),
         "pages" => [
             "login" =>
-                \JeffGreco13\FilamentBreezy\Http\Livewire\Auth\Login::class,
+                \App\Http\Livewire\Auth\Login::class,
         ],
     ],
 
