@@ -38,7 +38,7 @@
         @endif
     </div>
 
-    <form wire:submit.prevent="callMountedAction">
+    <form wire:submit.prevent="callMountedAction" novalidate>
         @php
             $action = $this->getMountedAction();
         @endphp

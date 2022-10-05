@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Shop;
 
+use AlperenErsoy\FilamentExport\Actions\FilamentExportBulkAction;
 use App\Filament\Resources\Shop\CustomerResource\Pages;
 use App\Filament\Resources\Shop\CustomerResource\RelationManagers;
 use App\Models\Shop\Customer;
@@ -97,6 +98,7 @@ class CustomerResource extends Resource
                             ->warning()
                             ->send();
                     }),
+                FilamentExportBulkAction::make('export'),
             ]);
     }
 

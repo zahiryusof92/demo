@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Shop;
 
+use AlperenErsoy\FilamentExport\Actions\FilamentExportBulkAction;
 use App\Filament\Resources\Shop\CategoryResource\Pages;
 use App\Filament\Resources\Shop\CategoryResource\RelationManagers;
 use App\Models\Shop\Category;
@@ -111,6 +112,7 @@ class CategoryResource extends Resource
                             ->warning()
                             ->send();
                     }),
+                FilamentExportBulkAction::make('export'),
             ]);
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Shop;
 
+use AlperenErsoy\FilamentExport\Actions\FilamentExportBulkAction;
 use App\Filament\Resources\Shop\BrandResource\RelationManagers\ProductsRelationManager;
 use App\Filament\Resources\Shop\ProductResource\Pages;
 use App\Filament\Resources\Shop\ProductResource\RelationManagers;
@@ -221,6 +222,7 @@ class ProductResource extends Resource
                             ->warning()
                             ->send();
                     }),
+                FilamentExportBulkAction::make('export'),
             ]);
     }
 

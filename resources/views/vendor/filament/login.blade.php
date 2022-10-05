@@ -1,4 +1,4 @@
-<form wire:submit.prevent="authenticate" class="space-y-8">
+<form wire:submit.prevent="authenticate" class="space-y-8" novalidate>
     {{ $this->form }}
 
     <x-filament::button type="submit" form="authenticate" class="w-full">

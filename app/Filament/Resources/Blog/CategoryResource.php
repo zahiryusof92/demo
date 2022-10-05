@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Blog;
 
+use AlperenErsoy\FilamentExport\Actions\FilamentExportBulkAction;
 use App\Filament\Resources\Blog\CategoryResource\Pages;
 use App\Models\Blog\Category;
 use Filament\Forms;
@@ -80,6 +81,7 @@ class CategoryResource extends Resource
                             ->warning()
                             ->send();
                     }),
+                FilamentExportBulkAction::make('export'),
             ]);
     }
 

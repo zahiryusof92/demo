@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Blog;
 
+use AlperenErsoy\FilamentExport\Actions\FilamentExportBulkAction;
 use App\Filament\Resources\Blog\PostResource\Pages;
 use App\Filament\Resources\Blog\PostResource\RelationManagers;
 use App\Models\Blog\Post;
@@ -180,6 +181,7 @@ class PostResource extends Resource
                             ->warning()
                             ->send();
                     }),
+                FilamentExportBulkAction::make('export'),
             ]);
     }
 

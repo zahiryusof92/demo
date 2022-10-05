@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Shop;
 
+use AlperenErsoy\FilamentExport\Actions\FilamentExportBulkAction;
 use App\Filament\Resources\Shop\BrandResource\Pages;
 use App\Filament\Resources\Shop\BrandResource\RelationManagers;
 use App\Models\Shop\Brand;
@@ -107,6 +108,7 @@ class BrandResource extends Resource
                             ->warning()
                             ->send();
                     }),
+                FilamentExportBulkAction::make('export'),
             ])
             ->defaultSort('sort')
             ->reorderable('sort');

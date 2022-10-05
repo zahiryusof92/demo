@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Blog;
 
+use AlperenErsoy\FilamentExport\Actions\FilamentExportBulkAction;
 use App\Filament\Resources\Blog\AuthorResource\Pages;
 use App\Models\Blog\Author;
 use Filament\Forms;
@@ -78,6 +79,7 @@ class AuthorResource extends Resource
                             ->warning()
                             ->send();
                     }),
+                FilamentExportBulkAction::make('export'),
             ]);
     }
 
