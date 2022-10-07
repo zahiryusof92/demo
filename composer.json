@@ -11,6 +11,7 @@
         "php": "^8.0.2",
         "alperenersoy/filament-export": "^0.1.7",
         "bezhansalleh/filament-language-switch": "^1.0",
+        "bezhansalleh/filament-shield": "^2.2",
         "filament/filament": "^2.15",
         "filament/spatie-laravel-media-library-plugin": "^2.15",
         "filament/spatie-laravel-settings-plugin": "^2.15",
