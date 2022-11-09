@@ -11,7 +11,7 @@ return [
     /*
     | Whether or not to automatically link the My Profile page in the user menu of Filament. NOTE: if enable_profile_page => false then this value is ignored and you'll need to register the item in your service provider manually.
     */
-    "show_profile_page_in_user_menu" => false,
+    "show_profile_page_in_user_menu" => true,
     /*
     | Whether or not to automatically display the My Profile page in the navigation of Filament. NOTE: if enable_profile_page => false then this value is ignored.
     */
